@@ -23,4 +23,8 @@ public interface List {
 
     int size();
 
+    void insertAt(Object item, int position);
+
+    public void swap(int j, int i);
+
 }

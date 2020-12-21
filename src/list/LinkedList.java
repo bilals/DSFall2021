@@ -11,6 +11,16 @@ package list;
  */
 public class LinkedList implements List {
 
+    @Override
+    public void insertAt(Object item, int position) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void swap(int j, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private class Node {
 
         Object value;

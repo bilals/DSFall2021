@@ -90,4 +90,16 @@ public class ArrayList implements List {
         return -1;
     }
 
+    @Override
+    public void insertAt(Object item, int position) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void swap(int pos1, int pos2) {
+        Object temp = list[pos2];
+        list[pos2] = list[pos1];
+        list[pos1] = temp;
+    }
+
 }
