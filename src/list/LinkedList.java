@@ -21,6 +21,11 @@ public class LinkedList implements List {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private class Node {
 
         Object value;
@@ -38,15 +43,32 @@ public class LinkedList implements List {
         if (head == null) {
             head = new Node(newElement);
         } else {
-            // go to the tail of the list, and create a new node with the newElment
-            Node currentNode = head;
-            while (currentNode.next != null) {
-                currentNode = currentNode.next;
-            }
-            currentNode.next = new Node(newElement);
+            recursivelyAdd(newElement, head);
         }
     }
 
+    private void recursivelyAdd(Object newElement, Node node) {
+        if (node.next == null) {
+            // node is the tail
+            node.next = new Node(newElement);
+        } else {
+            recursivelyAdd(newElement, node.next);
+        }
+    }
+
+//    @Override
+//    public void add(Object newElement) {
+//        if (head == null) {
+//            head = new Node(newElement);
+//        } else {
+//            // go to the tail of the list, and create a new node with the newElment
+//            Node currentNode = head;
+//            while (currentNode.next != null) {
+//                currentNode = currentNode.next;
+//            }
+//            currentNode.next = new Node(newElement);
+//        }
+//    }
     @Override
     public Object get(int index) {
         Node current = head;

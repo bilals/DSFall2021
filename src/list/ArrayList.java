@@ -102,4 +102,21 @@ public class ArrayList implements List {
         list[pos1] = temp;
     }
 
+    @Override
+    public void display() {
+        if (effectiveSize == 0) {
+            System.out.println("[-empty list-]");
+            return;
+        }
+        System.out.print("[");
+        for (int i = 0; i < effectiveSize; i++) {
+            if (i == effectiveSize - 1) {
+                System.out.print(list[i]);
+                continue;
+            }
+            System.out.print(list[i] + ", ");
+        }
+        System.out.println("]");
+    }
+
 }

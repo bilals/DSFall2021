@@ -27,4 +27,6 @@ public interface List {
 
     public void swap(int j, int i);
 
+    public void display();
+
 }
